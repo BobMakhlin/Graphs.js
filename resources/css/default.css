@@ -1,0 +1,71 @@
+#site-wrapper {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+.non-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.hidden-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+.container.big {
+    max-width: 950px;
+}
+.container.medium {
+    max-width: 800px;
+}
+.container.small {
+    max-width: 700px;
+}
+
+#main {
+    padding-top: 1em;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1224px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* /Media queries */

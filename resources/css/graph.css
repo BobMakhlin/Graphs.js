@@ -1,0 +1,32 @@
+:root {
+    --gray-light: #e0e0e0;
+    --orange: #ff9600;
+}
+
+.graph {
+    width: 25em;
+}
+.graph__name {
+    font-size: 1.2em;
+    text-align: center;
+
+    margin-bottom: 0.5em;
+}
+
+.graph__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.1em;
+}
+.progress-line {
+    width: 90.5%;
+    height: 1.3em;
+
+    background-color: var(--gray-light);
+}
+.progress-line__inner {
+    height: 100%;
+    background-color: var(--orange);
+}
