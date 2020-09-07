@@ -1,32 +1,122 @@
-:root {
-    --gray-light: #e0e0e0;
-    --orange: #ff9600;
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 .graph {
     width: 25em;
+
+    position: relative;
 }
+
+/* Graph styles */
+
+.graph.orange .progress-line {
+    background-color: #e0e0e0;
+} 
+.graph.orange .progress-line__inner {
+    background-color: #ff9600;
+} 
+.graph.orange .cur-period {
+    border-color:#F0AA48;
+}
+.graph.orange .cur-period::before {
+    border-bottom-color: #F0AA48;
+}
+
+.graph.green .progress-line {
+    background-color: #e0e0e0;
+} 
+.graph.green .progress-line__inner {
+    background-color: #72DB1D;
+} 
+.graph.green .cur-period {
+    border-color:#5DB317;
+}
+.graph.green .cur-period::before {
+    border-bottom-color: #5DB317;
+}
+
+.graph.blue .progress-line {
+    background-color: #e0e0e0;
+} 
+.graph.blue .progress-line__inner {
+    background-color: #3B5BFF;
+} 
+.graph.blue .cur-period {
+    border-color:#334FDE;
+}
+.graph.blue .cur-period::before {
+    border-bottom-color: #334FDE;
+}
+
+/* Graph styles */
+
+
+.graph__title {
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+}
+
 .graph__name {
+    margin-bottom: 0.5em;
     font-size: 1.2em;
     text-align: center;
-
-    margin-bottom: 0.5em;
 }
 
-.graph__line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    font-size: 1.1em;
+.graph__sliders {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.15em;
 }
+.graph__prev-period {
+    margin-right: 0.5em;
+}
+
+
 .progress-line {
-    width: 90.5%;
+    width: 100%;
     height: 1.3em;
-
-    background-color: var(--gray-light);
 }
+
 .progress-line__inner {
     height: 100%;
-    background-color: var(--orange);
 }
+
+/* Cur period */
+
+.cur-period {
+    width: 18%;
+    text-align: center;
+    border: 3px solid black;
+
+    padding: 0.5em;
+    margin-top: 2em;
+
+    position: absolute;
+    transform: translate(-50%, 0);
+    font-size: 1.1em;
+}
+.cur-period::before {
+    content: '';
+
+    border: 12px solid transparent;
+    border-bottom: 20px solid black;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -34px;
+}
+
+.cur-period__name {
+    word-wrap: break-word;
+
+    margin-bottom: 1em;
+}
+
+.cur-period__value {
+    font-size: 1.025em;
+}
+
+/* /Cur period */

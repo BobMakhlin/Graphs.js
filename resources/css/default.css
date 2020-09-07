@@ -21,9 +21,6 @@ h2 {
     -ms-user-select: none;
     user-select: none;
 }
-.cursor-pointer {
-    cursor: pointer;
-}
 .hidden-link {
     text-decoration: none;
     color: inherit;
